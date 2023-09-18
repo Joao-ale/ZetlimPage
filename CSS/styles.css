@@ -6,26 +6,46 @@
 
 /* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background: 
+        linear-gradient(
+        217deg,
+        #004c7f,
+        #0095da 70.71%
+      ), linear-gradient(127deg, #2bc4f3, rgba(0, 255, 0, 0) 70.71%),
+      linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%),
+      linear-gradient(90deg, #fff 30%,#000);
+    font-family: "Gothan", "FS siena";
+    background-color: #000000;
     color: #333;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    flex: auto;
 }
 
-.container {
-    max-width: 300px;
-    margin: auto;
-    padding: 20px;
+.logo {
+    width: 200px; /* Largura e altura iguais para criar um círculo */
+    height: 200px;
+    border-radius: 50%; /* Bordas arredondadas para criar um círculo */
+    overflow: hidden; 
+    position: relative;
 }
+
+.logo img{
+    width: 100%; /* Ajustar a largura da imagem para preencher o círculo */
+    height: auto; /* Manter a proporção original da imagem */
+    display: block;
+    position: absolute; /* Posiciona a imagem dentro do círculo */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
 
 header {
-    background-color: #007bff;
-    color: #fff;
-    text-align: center;
+    background-color: #ffffff;
     padding: 1rem 0;
-    border-radius: 50%;
     width: 170px;
     height: 170px;
 }
@@ -36,11 +56,11 @@ header h1 {
 }
 
 section {
-    background-color: #fff;
+    
     padding: 2rem;
     margin: 2rem;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
 }
 
 h2 {
@@ -63,7 +83,30 @@ li {
     margin-bottom: 0.5rem;
 }
 
-/* Estilize outras seções e elementos conforme necessário */
+
+.whatsapp-container {
+    border: 2px solid #fff;
+    text-align: center;
+    background-color: #004c7f; 
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.whatsapp-container img {
+    width: 40px; 
+    height: 40px; 
+    margin-right: 10px; 
+    vertical-align: middle; 
+}
+.whatsapp-container a{
+    color: #fff;
+}
+.whatsapp-container p {
+    font-size: 18px;
+    color: #fff; 
+    margin: 0;
+    display: inline; 
+}
 
 /* Estilos para a seção de benefícios */
 #benefits ul {
@@ -78,4 +121,46 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 70%;
+        padding-bottom: 70%;
+    }
+}
+
+footer {
+    background-color: #004c7f;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.email img,
+.address img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.email a,
+.address a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.email a:hover,
+.address a:hover,
+.whatsapp-container a:hover{
+    color: #fff;
+    text-decoration: underline;
+    font-size: 15px;
 }
