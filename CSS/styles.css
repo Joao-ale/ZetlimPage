@@ -18,8 +18,6 @@ body {
     background-color: #000000;
     color: #333;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     flex: auto;
 }
 
@@ -29,6 +27,7 @@ body {
     border-radius: 50%; /* Bordas arredondadas para criar um círculo */
     overflow: hidden; 
     position: relative;
+    margin-left: 50%;
 }
 
 .logo img{
@@ -42,14 +41,12 @@ body {
     right: 0;
 }
 
-
 header {
     background-color: #ffffff;
     padding: 1rem 0;
     width: 170px;
     height: 170px;
 }
-
 
 header h1 {
     font-size: 2rem;
@@ -83,12 +80,11 @@ li {
     margin-bottom: 0.5rem;
 }
 
-
 .whatsapp-container {
     border: 2px solid #fff;
     text-align: center;
     background-color: #004c7f; 
-    padding: 20px;
+    padding: 5px;
     border-radius: 5px;
 }
 
@@ -98,9 +94,11 @@ li {
     margin-right: 10px; 
     vertical-align: middle; 
 }
+
 .whatsapp-container a{
     color: #fff;
 }
+
 .whatsapp-container p {
     font-size: 18px;
     color: #fff; 
@@ -128,6 +126,58 @@ a:hover {
         width: 70%;
         padding-bottom: 70%;
     }
+}
+
+.service{
+    width: 400px; /* Largura desejada para a section */
+    height: auto; /* Altura desejada para a section */
+    text-align: center;
+}
+
+.services{
+    columns: 2;
+    column-gap: 20px; 
+    list-style-type: none;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente as imagens */
+
+}
+
+/* Estilos para as imagens */
+.image {
+    width: 200px;
+    height: 200px;
+    margin: 10px; 
+}
+
+.galeria {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Estilos para a coluna de texto à esquerda */
+.text-galeria{
+    flex: 1; /* A coluna de texto ocupa 1/3 do espaço disponível */
+    padding: 20px;
+}
+
+/* Estilos para a coluna de imagens à direita */
+.images-galeria {
+    flex: 3; /* A coluna de imagens ocupa 2/3 do espaço disponível */
+    display: flex;
+    flex-wrap: wrap; /* As imagens são dispostas em várias linhas quando o espaço é insuficiente */
+    justify-content: flex-end; /* Alinha as imagens à direita */
+}
+
+/* Estilos para as imagens */
+.imageGaleria {
+    width: 300px; /* Largura desejada para as imagens */
+    height: 100px; /* Altura desejada para as imagens */
+    margin: 10px; /* Espaçamento entre as imagens (ajuste conforme necessário) */
 }
 
 footer {
