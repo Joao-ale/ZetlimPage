@@ -21,6 +21,14 @@ body {
     flex: auto;
 }
 
+
+header {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    width: 170px;
+    height: 170px;
+}
+
 .logo {
     width: 200px; /* Largura e altura iguais para criar um círculo */
     height: 200px;
@@ -41,11 +49,12 @@ body {
     right: 0;
 }
 
-header {
-    background-color: #ffffff;
-    padding: 1rem 0;
-    width: 170px;
-    height: 170px;
+
+@media (max-width: 768px) {
+    .logo {
+        width: 70%;
+        padding-bottom: 70%;
+    }
 }
 
 header h1 {
@@ -81,11 +90,16 @@ li {
 }
 
 .whatsapp-container {
-    border: 2px solid #fff;
+    width: 400px;
     text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #fff;
     background-color: #004c7f; 
     padding: 5px;
     border-radius: 5px;
+    position: relative;
 }
 
 .whatsapp-container img {
@@ -121,17 +135,13 @@ a:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    .logo {
-        width: 70%;
-        padding-bottom: 70%;
-    }
-}
 
 .service{
-    width: 400px; /* Largura desejada para a section */
+    width: 500px; /* Largura desejada para a section */
     height: auto; /* Altura desejada para a section */
     text-align: center;
+    margin: 0 auto; /* Centraliza horizontalmente a section */
+    left: 50%;
 }
 
 .services{
@@ -140,17 +150,40 @@ a:hover {
     list-style-type: none;
 }
 
-.image-container {
+.image-services-container {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente as imagens */
-
+    overflow: hidden;
+    width: 100%;
+    max-width: 200px; /* Largura desejada para o carrossel */
+    margin: 0 auto; /* Centraliza horizontalmente o carrossel */
+    text-align: center; /* Centraliza horizontalmente as imagens */
 }
 
-/* Estilos para as imagens */
-.image {
-    width: 200px;
+.image-services {
+    width: auto;
     height: 200px;
-    margin: 10px; 
+    margin: 5px; 
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.prev-button, .next-button {
+    background-color: #0074d9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
 }
 
 .galeria {
@@ -162,12 +195,12 @@ a:hover {
 /* Estilos para a coluna de texto à esquerda */
 .text-galeria{
     flex: 1; /* A coluna de texto ocupa 1/3 do espaço disponível */
-    padding: 20px;
+    padding: 100px;
 }
 
 /* Estilos para a coluna de imagens à direita */
 .images-galeria {
-    flex: 3; /* A coluna de imagens ocupa 2/3 do espaço disponível */
+    flex: 2; /* A coluna de imagens ocupa 2/3 do espaço disponível */
     display: flex;
     flex-wrap: wrap; /* As imagens são dispostas em várias linhas quando o espaço é insuficiente */
     justify-content: flex-end; /* Alinha as imagens à direita */
@@ -175,8 +208,8 @@ a:hover {
 
 /* Estilos para as imagens */
 .imageGaleria {
-    width: 300px; /* Largura desejada para as imagens */
-    height: 100px; /* Altura desejada para as imagens */
+    width: 400px; /* Largura desejada para as imagens */
+    height: 200px; /* Altura desejada para as imagens */
     margin: 10px; /* Espaçamento entre as imagens (ajuste conforme necessário) */
 }
 

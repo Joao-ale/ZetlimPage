@@ -18,3 +18,28 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+const carousel = document.querySelector(".carousel");
+const images = document.querySelectorAll(".image-services");
+const imageWidth = images[0].clientWidth;
+let currentIndex = 0;
+
+function moveCarousel(direction) {
+    if (direction === "next") {
+        currentIndex = (currentIndex + 1) % images.length;
+    } else if (direction === "prev") {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+    }
+
+    const translateX = -currentIndex * imageWidth;
+    carousel.style.transform = `translateX(${translateX}px)`;
+}
+
+document.querySelector(".next-button").addEventListener("click", () => {
+    moveCarousel("next");
+});
+
+document.querySelector(".prev-button").addEventListener("click", () => {
+    moveCarousel("prev");
+});
+
