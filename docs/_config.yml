@@ -1,0 +1,39 @@
+# Configurações do site
+title: Zetlim Pós Obra
+description: Landing page para a empresa de produtos de limpeza Zetlim limpeza e obra
+url: https://zetlimposobras.com..r # URL do seu site
+baseurl: "/docs" # Subdiretório, se o site não estiver na raiz do domínio
+
+# Configurações do build
+markdown: kramdown # Pode ser alterado para "redcarpet" ou outro processador Markdown
+theme: minima # Escolha o tema que deseja usar (você pode personalizar ou criar seu próprio tema)
+gems:
+  - jekyll-feed # Ativar feed RSS para o seu site
+exclude: [".git", "Gemfile", "Gemfile.lock", "node_modules", "vendor"]
+
+# Configurações de permissões
+permalink: pretty # Formato de URL (pretty URLs)
+timezone: America/Sao_Paulo # Fuso horário do seu site
+locale: pt_BR # Localização (idioma e país)
+
+# Configurações de construção
+plugins:
+  - jekyll-sitemap # Gera um sitemap.xml automaticamente
+  - jekyll-seo-tag # Gera meta tags de SEO automaticamente
+
+# Configurações de personalização
+author:
+  name: João Alexandre
+  email: joaoale.freela@gmail.com
+
+# Configurações de estilos
+sass:
+  style: compressed # Você pode optar por "expanded" para desenvolvimento
+
+# Configurações de navegação
+header_pages:
+  - about.md
+  - services.md
+  - contact.md
+
+# Outras configurações específicas do tema ou personalizadas
