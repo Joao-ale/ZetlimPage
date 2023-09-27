@@ -23,9 +23,24 @@ nav {
 }
 
 .logo img {
-    max-width: 100%; /* O logo ocupará no máximo 100% do espaço disponível */
+    max-width: 70%; /* O logo ocupará no máximo 100% do espaço disponível */
     height: auto; /* Mantém a proporção original do logo */
     padding-left: 0;
+}
+@media (max-width: 768px) {
+    /* Estilos para telas menores */
+    .logo img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Estilos para telas médias */
+    .logo img {
+        width: 70%;
+        height: auto;
+    }
 }
 
 .menu {
