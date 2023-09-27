@@ -127,6 +127,15 @@ nav {
     color: #fff;
 }
 
+@media (max-width: 768px) {
+    .cta-button {
+        margin-top: 10px; /* Adicione uma margem superior */
+        display: block; /* Para que eles ocupem toda a largura disponível */
+        text-align: center; /* Centralize o texto */
+    }
+}
+
+
 /* Estilos das outras seções */
 section {
     background-color: #fff;
