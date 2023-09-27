@@ -1,5 +1,3 @@
-// Função para rolar suavemente para as âncoras de navegação
-// Função para rolar suavemente para as âncoras de navegação
 document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll('a[href^="#"]');
     
@@ -19,6 +17,17 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.querySelector(".menu-icon");
+    const menu = document.querySelector(".menu");
+
+    menuIcon.addEventListener("click", function () {
+        menu.classList.toggle("active");
+    });
+});
+
+
 
 // Função para mostrar uma mensagem de confirmação ao clicar no botão "Entre em Contato"
 const contactButton = document.querySelector(".contact-button");
