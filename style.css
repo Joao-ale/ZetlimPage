@@ -23,9 +23,9 @@ nav {
 }
 
 .logo img {
-    width: 500px;
-    max-width: max-content;
-    padding-left: 200px;
+    max-width: 100%; /* O logo ocupará no máximo 100% do espaço disponível */
+    height: auto; /* Mantém a proporção original do logo */
+    padding-left: 0;
 }
 
 .menu {
@@ -35,7 +35,7 @@ nav {
 }
 
 .menu li {
-    font-size: 16px;
+    font-size: 25px;
 }
 
 .menu a {
@@ -46,6 +46,45 @@ nav {
 
 .menu a:hover {
     color: #007bff;
+}
+
+@media (max-width: 768px){
+    .menu{
+        display: none; /* Oculta o menu de navegação padrão */
+        flex-direction: column; /* Empilha os itens de menu verticalmente */
+        gap: 10px;
+        text-align: center;
+        background-color: #eaeef1; /* Adicione um plano de fundo para o menu de hambúrguer */
+        padding: 10px; /* Espaçamento interno para itens de menu */
+        transform: translateY(-10px); /* Comece um pouco acima */
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Adicione transições */
+        z-index: 1;
+    }
+    .menu.active {
+        display: flex; /* Exibe o menu de hambúrguer quando ativado */
+    }
+
+    .menu li {
+        font-size: auto;
+        text-align: center;
+    }
+
+    /* Adicione um ícone de menu */
+    .menu-icon {
+        font-size: 24px;
+        cursor: pointer;
+        position: ab;
+        top: 10px;
+        right: 10px;
+        color: #050505;
+        z-index: 2;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none;
+    }
 }
 
 /* Estilos do hero section */
