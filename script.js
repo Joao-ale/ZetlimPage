@@ -28,14 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-// Função para mostrar uma mensagem de confirmação ao clicar no botão "Entre em Contato"
-const contactButton = document.querySelector(".contact-button");
-
-contactButton.addEventListener("click", function () {
-        alert("Sua mensagem foi enviada!");
-});
-
 const carousel = document.querySelector(".carousel");
 const images = document.querySelectorAll(".gallery-images");
 const prevButton = document.querySelector(".prev-button");
