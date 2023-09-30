@@ -1,7 +1,7 @@
 # Configurações do site
 title: Zetlim Pós Obra
 description: Landing page para a empresa de produtos de limpeza Zetlim limpeza e obra
-url: https://zetlimposobras.com..r # URL do seu site
+# URL do seu site
 baseurl: "/docs" # Subdiretório, se o site não estiver na raiz do domínio
 
 # Configurações do build
