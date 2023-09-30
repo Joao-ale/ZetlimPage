@@ -2,7 +2,7 @@
 title: Zetlim Pós Obra
 description: Landing page para a empresa de produtos de limpeza Zetlim limpeza e obra
 # URL do seu site
-baseurl: "/docs" # Subdiretório, se o site não estiver na raiz do domínio
+
 
 # Configurações do build
 markdown: kramdown # Pode ser alterado para "redcarpet" ou outro processador Markdown
@@ -29,11 +29,3 @@ author:
 # Configurações de estilos
 sass:
   style: compressed # Você pode optar por "expanded" para desenvolvimento
-
-# Configurações de navegação
-header_pages:
-  - about.md
-  - services.md
-  - contact.md
-
-# Outras configurações específicas do tema ou personalizadas
